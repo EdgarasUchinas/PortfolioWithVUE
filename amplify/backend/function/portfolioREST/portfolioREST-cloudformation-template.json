@@ -51,12 +51,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "portfolio",
+            "portfolioREST",
             {
               "Fn::Join": [
                 "",
                 [
-                  "portfolio",
+                  "portfolioREST",
                   "-",
                   {
                     "Ref": "env"
@@ -97,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "portfoliowithvueLambdaRole8559059a",
+            "portfoliowithvueLambdaRole6db7e500",
             {
               "Fn::Join": [
                 "",
                 [
-                  "portfoliowithvueLambdaRole8559059a",
+                  "portfoliowithvueLambdaRole6db7e500",
                   "-",
                   {
                     "Ref": "env"

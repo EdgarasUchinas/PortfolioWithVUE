@@ -1,22 +1,19 @@
 <template>
-
   <v-layout>
-    <NavigationBar/>
-
     <v-main>
-      <router-view/>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
     </v-main>
+    <BottomNavigation/>
   </v-layout>
-
-
-
-  
 </template>
 
 
 <script setup>
   import { defineComponent } from 'vue';
-  import NavigationBar from './components/NavigationBar.vue';
+  // import NavigationBar from './components/NavigationBar.vue';
+  import BottomNavigation from './components/BottomNavigation.vue';
 
   defineComponent({
     name: 'App',

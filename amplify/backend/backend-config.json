@@ -1,6 +1,22 @@
 {
+  "api": {
+    "portfolioREST": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "portfolioREST"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "function": {
-    "portfolio": {
+    "portfolioREST": {
       "build": true,
       "dependsOn": [
         {

@@ -30,12 +30,12 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/portfolio', function(req, res) {
+app.get('/api', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
 
-app.get('/portfolio/*', function(req, res) {
+app.get('/api/*', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });
@@ -44,12 +44,12 @@ app.get('/portfolio/*', function(req, res) {
 * Example post method *
 ****************************/
 
-app.post('/portfolio', function(req, res) {
+app.post('/api', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
 
-app.post('/portfolio/*', function(req, res) {
+app.post('/api/*', function(req, res) {
   // Add your code here
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
@@ -58,12 +58,12 @@ app.post('/portfolio/*', function(req, res) {
 * Example put method *
 ****************************/
 
-app.put('/portfolio', function(req, res) {
+app.put('/api', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
 
-app.put('/portfolio/*', function(req, res) {
+app.put('/api/*', function(req, res) {
   // Add your code here
   res.json({success: 'put call succeed!', url: req.url, body: req.body})
 });
@@ -72,12 +72,12 @@ app.put('/portfolio/*', function(req, res) {
 * Example delete method *
 ****************************/
 
-app.delete('/portfolio', function(req, res) {
+app.delete('/api', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
-app.delete('/portfolio/*', function(req, res) {
+app.delete('/api/*', function(req, res) {
   // Add your code here
   res.json({success: 'delete call succeed!', url: req.url});
 });
