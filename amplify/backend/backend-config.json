@@ -1,1 +1,14 @@
-{}
+{
+  "function": {
+    "portfolio": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "portfoliowithvuemongoDB": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    }
+  }
+}
