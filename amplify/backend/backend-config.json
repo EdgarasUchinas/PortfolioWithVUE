@@ -2,6 +2,15 @@
   "function": {
     "portfolio": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "portfoliowithvuemongoDB"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
