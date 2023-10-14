@@ -12,10 +12,16 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const connectionString = "mongodb+srv://euchAdmin:mN83cqDtH1vN8AOj@portfoliocluster.xyg5dvm.mongodb.net/?retryWrites=true&w=majority";
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://euchAdmin:<password>@portfoliocluster.xyg5dvm.mongodb.net/?retryWrites=true&w=majority";
-const mongoClient = new MongoClient(uri);
-const db = mongoClient.db("portfolio");
+
+
+async function connectToMongoDB() {
+  const client = await MongoClient.connect(connectionString);
+  const db = client.db("myDB");
+  return db;
+}
+
 
 // declare a new express app
 const app = express()
@@ -34,10 +40,15 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/api', function(req, res) {
-  // Add your code here
+app.get('/api', async function(req, res) {
+  console.log(req);
+  const db = await connectToMongoDB();
+  const skills = db.collection("Skills").find({});
 
-  res.json({success: 'get call succeed!', database: db});
+  res.json({
+    status: 200,
+    result: skills
+  });
 });
 
 app.get('/api/*', function(req, res) {
