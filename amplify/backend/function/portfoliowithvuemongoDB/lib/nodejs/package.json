@@ -3,6 +3,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "mongodb": "6.1"
   }
 }

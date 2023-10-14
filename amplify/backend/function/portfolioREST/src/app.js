@@ -12,6 +12,10 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://euchAdmin:<password>@portfoliocluster.xyg5dvm.mongodb.net/?retryWrites=true&w=majority";
+const mongoClient = new MongoClient(uri);
+const db = mongoClient.db("portfolio");
 
 // declare a new express app
 const app = express()
@@ -32,7 +36,8 @@ app.use(function(req, res, next) {
 
 app.get('/api', function(req, res) {
   // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
+
+  res.json({success: 'get call succeed!', mongoClient: mongoClient, database: db});
 });
 
 app.get('/api/*', function(req, res) {
