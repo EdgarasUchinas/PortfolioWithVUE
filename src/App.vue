@@ -12,7 +12,6 @@
 
 <script setup>
   import { defineComponent } from 'vue';
-  // import NavigationBar from './components/NavigationBar.vue';
   import BottomNavigation from './components/BottomNavigation.vue';
 
   defineComponent({
