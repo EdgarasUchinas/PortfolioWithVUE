@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation :elevation="6" grow>
+    <v-bottom-navigation :elevation="6" v-model="activeNavigationIndex" grow>
       <v-btn value="recent">
         <v-icon>mdi-history</v-icon>
         <span>Recent</span>
@@ -19,11 +19,19 @@
 
 
 <script setup>
-import { defineComponent } from 'vue';
+  import { defineComponent, ref } from 'vue';
 
-    defineComponent({
-        name: 'BottomNavigation',
-    });
+  defineComponent({
+      name: 'BottomNavigation',
+  });
+
+
+
+  const activeNavigationIndex = ref(1);
+
+
+
+
 </script>
 
 <style scoped></style>

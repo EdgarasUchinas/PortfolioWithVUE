@@ -1,13 +1,13 @@
 <template>
-    <v-container fluid>
-      <v-row>
-        <v-col>
+    <v-container fluid id="container">
+      <v-row style="margin: 5%">
+        <v-col class="verticalCenterColText">
           <h1>Edgaras Uchinas</h1>
           <h3>Software Developer</h3>
           <p>Fusce vitae mi quis neque porttitor ornare eu sit amet ex. Fusce rutrum vestibulum nisi vel ornare.</p>
         </v-col>
         <v-col>
-          <v-img></v-img>
+          <img src="../assets/me.png" alt="">
         </v-col>
       </v-row>
     </v-container>
@@ -30,3 +30,26 @@ onMounted(async () => {
   console.log(result);
 });
 </script>
+
+
+<style scoped>
+
+#container {
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verticalCenterColText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+</style>
