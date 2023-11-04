@@ -27,10 +27,19 @@
 </script>
 
 <style>
-.page-slide-enter-active,
-.page-slide-leave-active {
-  transition: 400ms ease all;
+
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
 }
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
 
 .page-slide-enter-from,
 .page-slide-leave-to {
