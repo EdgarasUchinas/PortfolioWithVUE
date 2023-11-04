@@ -10,9 +10,7 @@ const routes = [
   {
     path: '/education',
     name: 'Education',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: { transition: 'slide-left'},
     component: () => import(/* webpackChunkName: "about" */ '../views/EducationView.vue')
   }
 ]

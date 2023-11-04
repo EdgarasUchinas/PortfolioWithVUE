@@ -1,8 +1,12 @@
 <template>
   <v-layout>
-    <v-main>
+    <v-main style="background-color: #21252b; height: 100vh">
       <v-container fluid>
-        <router-view/>
+        <router-view v-slot="{ Component }">
+          <Transition name="page-slide" mode="out-in">
+            <component :is="Component" />
+          </Transition>
+        </router-view>
       </v-container>
     </v-main>
     <BottomNavigation/>
@@ -23,6 +27,17 @@
 </script>
 
 <style>
+.page-slide-enter-active,
+.page-slide-leave-active {
+  transition: 400ms ease all;
+}
+
+.page-slide-enter-from,
+.page-slide-leave-to {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

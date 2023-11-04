@@ -1,18 +1,18 @@
 <template>
-    <v-bottom-navigation :elevation="6" v-model="activeNavigationIndex" grow>
+    <v-bottom-navigation :elevation="6" v-model="activeNavigationIndex" grow style="background-color: #1d2126;">
       <v-btn @click="handleNavigationClick('Education')">
-        <v-icon>mdi-history</v-icon>
-        <span>Education</span>
+        <v-icon style="color: #8e9093">mdi-history</v-icon>
+        <span style="color: #8e9093">Education</span>
       </v-btn>
 
       <v-btn @click="handleNavigationClick('Home')">
-        <v-icon>mdi-home</v-icon>
-        <span>Home</span>
+        <v-icon style="color:#8e9093">mdi-home</v-icon>
+        <span style="color:#8e9093">Home</span>
       </v-btn>
 
       <v-btn @click="handleNavigationClick('Experience')">
-        <v-icon>mdi-map-marker</v-icon>
-        <span>Experience</span>
+        <v-icon style="color:#8e9093">mdi-map-marker</v-icon>
+        <span style="color: #8e9093">Experience</span>
       </v-btn>
     </v-bottom-navigation>
 </template>

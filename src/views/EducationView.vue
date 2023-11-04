@@ -40,22 +40,16 @@
 
 
 <script setup>
-    const educationList = [
-        {
-          color: 'red',
-          time_frame: 'Currently Attending',
-          school_name: "New Jersey Institute of Technology",
-          degree: "Bachelors Degree in Web and Information Systems",
-          timestamp: 1698889308
-        },
-        {
-          color: 'pink',
-          time_frame: '2017-2020',
-          school_name: "Union County College",
-          degree: "Associates Degree in Computer Science",
-          timestamp: 1509601308
-        },
-      ];
+    import { useGeneralStore } from '@/stores/generalStore.js';
+    import { onMounted, ref } from 'vue';
+
+    const educationList = ref([]);
+
+    onMounted(async () => {
+        const generalStore = useGeneralStore();
+        const result = await generalStore.getEducationFromDB();
+        educationList.value = result.data;
+    });
 </script>
 
 

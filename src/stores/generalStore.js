@@ -14,6 +14,10 @@ export const useGeneralStore = defineStore('generalStore', {
         async fetchSkills() {
             const result = await axios.get('https://us-east-1.aws.data.mongodb-api.com/app/portfolioapp-rfqln/endpoint/skills');
             return result;
+        },
+        async getEducationFromDB() {
+            const result = await axios.get('https://us-east-1.aws.data.mongodb-api.com/app/portfolioapp-rfqln/endpoint/education');
+            return result;
         }
     },
 })
