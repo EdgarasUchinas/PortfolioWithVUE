@@ -6,7 +6,7 @@
         <h2 style="color: rgb(228, 226, 255)">Software Developer</h2>
 
       <v-sheet max-width="400" style="background-color: #21252b;">
-        <v-slide-group v-model="model" class="pa-4" selected-class="bg-success" show-arrows>
+        <v-slide-group v-model="model" class="pa-4" selected-class="bg-primary" show-arrows>
           <v-slide-group-item>
             <v-card color="#1d2126" :class="['ma-4']" height="100" width="100">
               <div class="d-flex fill-height align-center justify-center">
