@@ -58,14 +58,17 @@ onMounted(async () => {
   #container {
     height: "auto"
   }
+
+  .mainTitle {
+    font-size: 2em;
+  }
 }
 
 
 
 .mainTitle {
-  font-size: 2.8em;
+  font-size: 2.6em;
   color: rgb(228, 226, 255);
-
 }
 
 #container {
