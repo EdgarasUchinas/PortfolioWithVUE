@@ -7,7 +7,7 @@
         <TechSliderGroup />
       </v-col>
       <v-col class="verticalCenterColText">
-        <img width="400" src="../assets/me.png" alt="">
+        <img class="profileImage" src="../assets/me.png" alt="">
       </v-col>
     </v-row>
   </v-container>
@@ -37,6 +37,31 @@ onMounted(async () => {
 
 
 <style scoped>
+
+.profileImage {
+  border-radius: 5px;
+  border-bottom: 15px;
+  border-right: 15px;
+  border-top: 15px;
+  border-left: 15px;
+  border-style: solid;
+  border-color: #1d2126;
+  width: 400px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .profileImage {
+    width: 300px;
+  }
+
+  #container {
+    height: "auto"
+  }
+}
+
+
+
 .mainTitle {
   font-size: 2.8em;
   color: rgb(228, 226, 255);
