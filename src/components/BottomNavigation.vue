@@ -14,6 +14,10 @@
         <v-icon style="color:#8e9093">mdi-map-marker</v-icon>
         <span style="color: #8e9093">Experience</span>
       </v-btn>
+      <v-btn @click="handleNavigationClick('Resume')">
+        <v-icon style="color:#8e9093">mdi-map-marker</v-icon>
+        <span style="color: #8e9093">Resume</span>
+      </v-btn>
     </v-bottom-navigation>
 </template>
 
@@ -39,6 +43,9 @@
     else if (value === "Experience") {
       activeNavigationIndex.value = 2;
     }
+    else if (value === "Resume") {
+      activeNavigationIndex.value = 3;
+    }
     else {
       activeNavigationIndex.value = 1;
     }
@@ -54,6 +61,9 @@
     }
     else if (value === "Experience") {
       router.push("/experience");
+    }
+    else if (value === "Resume") {
+      router.push("/resume");
     }
     else {
       router.push("/");

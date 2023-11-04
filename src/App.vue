@@ -39,7 +39,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
+.page-slide-enter-active,
+.page-slide-leave-active {
+  transition: 400ms ease all;
+}
 
 .page-slide-enter-from,
 .page-slide-leave-to {

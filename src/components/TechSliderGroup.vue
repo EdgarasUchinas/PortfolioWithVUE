@@ -73,11 +73,15 @@
 
 
 <script setup>
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 defineComponent({
   name: 'TechSliderGroup',
 });
+
+
+
+const model = ref(0);
 
 
 

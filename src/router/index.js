@@ -10,14 +10,23 @@ const routes = [
   {
     path: '/education',
     name: 'Education',
-    meta: { transition: 'slide-left'},
     component: () => import(/* webpackChunkName: "about" */ '../views/EducationView.vue')
+  },
+  {
+    path: '/experience',
+    name: 'Experience',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ExperienceView.vue')
+  },
+  {
+    path: '/resume',
+    name: 'Resume',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ResumeView.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
-})
+});
 
 export default router
