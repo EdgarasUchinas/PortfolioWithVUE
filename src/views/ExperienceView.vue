@@ -7,7 +7,7 @@
           </div>
         </v-col>
       </v-row>
-      <v-row justify="center">
+      <v-row justify="center" style="margin-bottom: 20px;">
         <v-col cols="auto">
           <v-timeline align="start" justify="center">
             <v-timeline-item
@@ -24,10 +24,10 @@
               </template>
               <div style="text-align: center;">
                 <h2 :class="`mt-n1 headline font-weight-light mb-4 text-${educationObject.color}`">
-                  {{ educationObject.school_name }}
+                  {{ educationObject.position }}
                 </h2>
                 <div style="text-align: center;">
-                  {{ educationObject.degree  }}
+                  {{ educationObject.description  }}
                 </div>
               </div>
             </v-timeline-item>
@@ -47,8 +47,8 @@
 
     onMounted(async () => {
         const generalStore = useGeneralStore();
-        const result = await generalStore.getEducationFromDB();
-        educationList.value = result.data;
+        const result = await generalStore.getExperienceFromDB();
+        educationList.value = result;
     });
 </script>
 

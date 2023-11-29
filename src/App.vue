@@ -27,7 +27,9 @@
 </script>
 
 <style>
-
+html {
+  background: #21252b;
+}
 
 body {
   -ms-overflow-style: none;
