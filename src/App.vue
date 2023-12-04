@@ -28,7 +28,7 @@
 
 <style>
 html {
-  background: #ffffff;
+  background: #000000;
 }
 
 body {
