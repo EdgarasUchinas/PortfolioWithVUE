@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout> 
     <v-main style="background-color: #21252b; height: 100vh">
       <v-container fluid>
         <router-view v-slot="{ Component }">
@@ -23,12 +23,29 @@
   });
 
 
-
 </script>
 
 <style>
+
+
+.navigation_bar {
+  background-color: #1d2126;
+  color: #ffffff;
+  height: 60px;
+}
+
+.p-menuitem-text {
+  color: #ffffff;
+  margin: 10px 10px 10px 10px;
+  font-size: 1.2em;
+}
+
+.p-menubar-button {
+  margin-left: 25px;
+}
+
 html {
-  background: #000000;
+  background: #21252b;
 }
 
 body {

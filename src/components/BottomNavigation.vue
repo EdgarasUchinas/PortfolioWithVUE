@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation :elevation="6" v-model="activeNavigationIndex" grow style="background-color: #1d2126;">
+    <v-bottom-navigation :elevation="6" grow v-model="activeNavigationIndex" style="background-color: #1d2126;">
       <v-btn @click="handleNavigationClick('Education')">
         <v-icon style="color: #8e9093">mdi-history</v-icon>
         <span style="color: #8e9093">Education</span>
@@ -17,6 +17,10 @@
       <v-btn @click="handleNavigationClick('Resume')">
         <v-icon style="color:#8e9093">mdi-map-marker</v-icon>
         <span style="color: #8e9093">Resume</span>
+      </v-btn>
+      <v-btn @click="handleNavigationClick('Contact')">
+        <v-icon style="color:#8e9093">mdi-map-marker</v-icon>
+        <span style="color: #8e9093">Contact</span>
       </v-btn>
     </v-bottom-navigation>
 </template>
@@ -46,6 +50,9 @@
     else if (value === "Resume") {
       activeNavigationIndex.value = 3;
     }
+    else if (value === "Contact") {
+      activeNavigationIndex.value = 4;
+    }
     else {
       activeNavigationIndex.value = 1;
     }
@@ -64,6 +71,9 @@
     }
     else if (value === "Resume") {
       router.push("/resume");
+    }
+    else if (value === "Contact") {
+      router.push("/contact");
     }
     else {
       router.push("/");
